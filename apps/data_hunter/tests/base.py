@@ -1,7 +1,9 @@
 import unittest
+import logging
+
 import webapp2
 import webtest
-import logging
+
 
 logging.basicConfig()
 
@@ -11,7 +13,7 @@ class BaseTestCase(unittest.TestCase):
 
     def setUp(self):
 
-        from apps.crime.application import app
+        from apps.data_hunter.application import app
         from google.appengine.ext import testbed
         self.app = app
 

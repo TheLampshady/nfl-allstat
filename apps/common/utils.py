@@ -1,3 +1,4 @@
+import logging
 from difflib import SequenceMatcher
 
 
@@ -14,4 +15,7 @@ def best_match(term, choices, default='other', threshold=0):
     if max_ratio < threshold:
         value = default
 
+    if max_ratio < 75:
+        logging.info("Hard Match: Ratio %s | Term %s | Choice %s" % \
+              (max_ratio, term, value))
     return value

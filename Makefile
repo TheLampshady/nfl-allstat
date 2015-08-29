@@ -6,4 +6,4 @@ install-libs:
 deploy-app:
 	#deploys to dev
 	deployer/shell.py --build_path=./ --app=nfl-database --app_version=init \
-	-v -i -d -q -c --modules app admin crime
+	-v -i -d -q -c --modules app admin hunter

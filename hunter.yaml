@@ -3,11 +3,11 @@ version: init
 runtime: python27
 api_version: 1
 threadsafe: true
-module: crime
+module: hunter
 
 handlers:
-- url: .*/crime/.*
-  script: apps.crime.application.app
+- url: .*/hunter/.*
+  script: apps.data_hunter.application.app
   secure: always
 
 libraries:

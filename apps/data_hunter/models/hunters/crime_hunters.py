@@ -1,33 +1,10 @@
-from lxml import html
 import urllib2
 import logging
+from lxml import html
 
-from utils import best_match
-from apps.crime.configs.crime_catagories import crime_category_list
-
-
-class HunterAbstract(object):
-    """
-    Parser for multiple source. Content for each source is differnet
-    """
-    site = ''
-    content = ''
-
-    def __init__(self):
-        raise NotImplementedError("Constructor Not Implemented")
-
-    def get_content(self):
-        raise NotImplementedError("Get Not Implemented")
-
-    def request_content(self):
-        response = urllib2.urlopen(self.site)
-        if response.code != 200:
-            raise ValueError('Request Error: Status Code: %s' % response.code)
-
-        return response.read()
-
-    def parse_content(self):
-        raise NotImplementedError("Parser Not Implemented")
+from apps.common.utils import best_match
+from apps.data_hunter.configs.crime_catagories import crime_category_list
+from apps.data_hunter.models.hunters.base_hunter import HunterAbstract
 
 
 class CrimeHunterUSA(HunterAbstract):
@@ -36,6 +13,7 @@ class CrimeHunterUSA(HunterAbstract):
         self.site = 'http://www.usatoday.com/sports/nfl/arrests/'
         self.search_table = '//tbody/tr'
         self.category_choices = crime_category_list
+        self.type = 'crime'
 
         self.td_classes = dict(
             date='td[1]',
@@ -48,14 +26,17 @@ class CrimeHunterUSA(HunterAbstract):
             outcome='td[8]',
         )
 
-    def get_content(self):
-        self.content = self.request_content()
-        return self.parse_content()
+    def request_content(self):
+        response = urllib2.urlopen(self.site)
+        if response.code != 200:
+            raise ValueError('Request Error: Status Code: %s' % response.code)
 
-    def parse_content(self):
+        return response.read()
+
+    def parse_content(self, content):
         record_list = list()
 
-        page = html.fromstring(self.content)
+        page = html.fromstring(content)
         table_rows = page.xpath(self.search_table)
 
         for row in table_rows:
@@ -72,4 +53,3 @@ class CrimeHunterUSA(HunterAbstract):
             record_list.append(record)
 
         return record_list
-

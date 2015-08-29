@@ -1,6 +1,4 @@
 from google.appengine.ext import ndb
-from google.appengine.api import taskqueue
-
 
 
 class ArrestRecord(ndb.Model):
@@ -15,4 +13,12 @@ class ArrestRecord(ndb.Model):
     outcome = ndb.StringProperty(required=True)
     category = ndb.StringProperty(repeated=True)
     description = ndb.StringProperty(required=True)
+    modifier = ndb.IntegerProperty(default=1)
+
+
+    def get_modifier(self):
+        #TODO refine catagories
+        #TODO add modifiers Ex: 1.05
+        #TODO 7 year Itch min modifier 1.01
+        return 1
 

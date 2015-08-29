@@ -15,6 +15,6 @@ dispatch:
   module: admin
 
 # Criminal Records
-- url: "*/crime*"
-  module: crime
+- url: "*/hunter*"
+  module: hunter
 
