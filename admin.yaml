@@ -1,0 +1,57 @@
+application: nfl-database
+version: init
+runtime: python27
+api_version: 1
+threadsafe: true
+module: admin
+
+handlers:
+
+# Turning on the remote apis: This maps the remote_api request handler to the URL /remote_api
+# for this application. Access to this URL is restricted to administrators for the application.
+- url: /remote_api
+  script: google.appengine.ext.remote_api.handler.application
+  login: admin
+  secure: always
+
+# Enable interactive console
+- url: /console/.*
+  script: google.appengine.ext.admin.application
+  login: admin
+  secure: always
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+skip_files:
+#File Types
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*\.scss
+- ^(.*/)?.*\.soy
+- ^(.*/)?.*\.log
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?\.DS_Store
+- ^(.*/)?\.coveragerc
+
+#Root Directory
+- ^tests/.*
+- ^deployer/.*
+- ^\.git/.*
+- Gruntfile.js
+- README.md
+- Makefile
+
+#Children Directory
+- .*/tests/.*
+- .*egg-info/.*
+- .*dist-info/.*
+- ^static/js/common/closure-library.*
+
+#Specific Files
+- ^(.*/)?.*(?<!robots)\.txt  # exclude all except robots.txt

@@ -1,0 +1,20 @@
+application: init-dot-nfl-database
+
+dispatch:
+
+# Admin
+- url: "*/admin*"
+  module: admin
+
+# Interactive Console
+- url: "*/console/*"
+  module: admin
+
+# Remote
+- url: "*/remote_api*"
+  module: admin
+
+# Criminal Records
+- url: "*/crime*"
+  module: crime
+

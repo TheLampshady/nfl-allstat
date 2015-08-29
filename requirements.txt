@@ -1,0 +1,11 @@
+#Apps
+lxml
+requests
+Jinja2
+google-api-python-client==1.4.0
+simplejson==3.7.3
+
+#Test
+WebTest==2.0.18
+webapp2
+mock

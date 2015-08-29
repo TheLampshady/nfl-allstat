@@ -1,0 +1,10 @@
+# Created by*~
+*.pyc
+*.DS_Store
+.idea
+*.pem
+*.p12
+*.coverage
+node_modules
+*.log
+.sass-cache

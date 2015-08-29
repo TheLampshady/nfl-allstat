@@ -1,0 +1,49 @@
+application: nfl-database
+version: init
+runtime: python27
+api_version: 1
+threadsafe: true
+module: crime
+
+handlers:
+- url: .*/crime/.*
+  script: apps.crime.application.app
+  secure: always
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: lxml
+  version: latest
+
+
+skip_files:
+#File Types
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*\.scss
+- ^(.*/)?.*\.soy
+- ^(.*/)?.*\.log
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?\.DS_Store
+- ^(.*/)?\.coveragerc
+
+#Root Directory
+- ^tests/.*
+- ^deployer/.*
+- ^\.git/.*
+- README.md
+- Makefile
+
+#Children Directory
+- .*/tests/.*
+- .*egg-info/.*
+- .*dist-info/.*
+- ^static/js/common/closure-library.*
+
+#Specific Files
+- ^(.*/)?.*(?<!robots)\.txt  # exclude all except robots.txt
