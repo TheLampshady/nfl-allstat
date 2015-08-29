@@ -1,5 +1,5 @@
 import os
-from mock import patch, MagicMock
+from mock import patch
 
 from apps.data_hunter.tests.base import BaseTestCase
 from apps.data_hunter.hunters import CrimeHunterUSA
@@ -12,18 +12,17 @@ mock_site = open(file_path, 'r').read()
 
 class TestMonitorModel(BaseTestCase):
 
-    patch_request = patch.object(CrimeHunterUSA, 'get_content')
+    patch_request = patch.object(CrimeHunterUSA, 'request_content')
 
     def setUp(self):
 
-        self.mock_request = self.patcher_lead_client.start()
-        self.mock_request.return_value = MagicMock(
-            return_value=mock_site)
+        self.mock_request = self.patch_request.start()
+        self.mock_request.return_value = mock_site
 
         super(TestMonitorModel, self).setUp()
 
     def tearDown(self):
-        self.patcher_lead_client.stop()
+        self.patch_request.stop()
 
     def test_hunter_parses_site(self):
         test_hunter = CrimeHunterUSA()
