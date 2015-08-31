@@ -15,15 +15,14 @@ class DataMonitorHandler(BaseHandler):
             hunter_source = CrimeHunterUSA()
         elif source == 'cbs':
             hunter_source = PlayerHunterCBS()
-
+        else:
+            self.abort(404)
         results = hunter_source.get_content()
 
-        types = set()
-        for result in results:
-            types = set(types).union(set(result['category']))
+        hunter_source.save_content(results)
 
         #self.queue_add(self.request.path, hunter_source.type)
-        self.render_json(list(types))
+        self.render_json(list(results))
 
 
     @classmethod

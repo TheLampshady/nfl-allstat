@@ -5,7 +5,8 @@ from lxml import html
 from apps.common.utils import best_match
 from apps.data_hunter.configs.crime_catagories import crime_category_list
 from apps.data_hunter.models.hunters.base_hunter import HunterAbstract
-
+from apps.data_hunter.models.player_records import Player
+from apps.data_hunter.models.crime_records import ArrestRecord
 
 class CrimeHunterUSA(HunterAbstract):
 
@@ -16,11 +17,11 @@ class CrimeHunterUSA(HunterAbstract):
         self.type = 'crime'
 
         self.td_classes = dict(
-            date='td[1]',
+            date_recorded='td[1]',
             team='td[2]',
             name='td[3]',
             pos='td[4]',
-            case='td[5]',
+            case_type='td[5]',
             category='td[6]',
             description='td[7]',
             outcome='td[8]',
@@ -43,7 +44,7 @@ class CrimeHunterUSA(HunterAbstract):
             record = dict()
             for key, value in self.td_classes.items():
                 try:
-                    content = row.xpath(value)[0].text_content()
+                    content = row.xpath(value)[0].text_content().lower()
                     if key == 'category':
                         content = [best_match(x.strip().lower(), self.category_choices)
                                    for x in content.split(',')]
@@ -53,3 +54,13 @@ class CrimeHunterUSA(HunterAbstract):
             record_list.append(record)
 
         return record_list
+
+    def save_content(self, record_list):
+        for record in record_list:
+            player = Player.get_fuzzy_record(record['name'])
+
+            if not player:
+                logging.warning("Player Not Found: %s" % record)
+                continue
+
+            ArrestRecord.update_insert_record(player[0], record)

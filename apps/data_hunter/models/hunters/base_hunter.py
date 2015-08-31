@@ -19,3 +19,6 @@ class HunterAbstract(object):
 
     def parse_content(self):
         raise NotImplementedError("Parser Not Implemented")
+
+    def save_content(self):
+        raise NotImplementedError("Saving Content Not Implemented")

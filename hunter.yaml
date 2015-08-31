@@ -31,6 +31,7 @@ skip_files:
 - ^(.*/)?\..*
 - ^(.*/)?\.DS_Store
 - ^(.*/)?\.coveragerc
+- ^(.*/)?\.datastore
 
 #Root Directory
 - ^tests/.*

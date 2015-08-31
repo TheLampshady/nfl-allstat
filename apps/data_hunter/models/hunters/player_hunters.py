@@ -2,6 +2,7 @@ import urllib2
 import json
 import logging
 
+from google.appengine.ext import ndb
 from google.appengine.api import urlfetch
 
 from apps.data_hunter.models.hunters.base_hunter import HunterAbstract
@@ -60,9 +61,9 @@ class PlayerHunterCBS(HunterAbstract):
                     last_name=player.get('lastname', "").lower(),
                     name=player.get('fullname', "").lower(),
                     position=player.get('position', "").lower(),
-                    jersey=int(player.get('jersey', "0")),
+                    jersey=int(player.get('jersey') or 0),
                     team=player.get('pro_team', "").lower(),
-                    bye_week=int(player.get('bye_week', "")),
+                    bye_week=int(player.get('bye_week') or 0),
                     image=player.get('photo', "").lower(),
                 ))
             except Exception as e:
@@ -70,6 +71,13 @@ class PlayerHunterCBS(HunterAbstract):
                 logging.warning("Invalid Player: %s" % player)
 
         return record_list
+
+    def save_content(self, player_list):
+        # future_list = list()
+        # for player_prop in player_list:
+        #     future_list.append(Player.update_insert_record(player_prop))
+        # ndb.Future.wait_all(future_list)
+        Player.overwrite_all(player_list)
 
 
 class PlayerHunterPro(HunterAbstract):
@@ -107,4 +115,5 @@ class PlayerHunterPro(HunterAbstract):
         json_result = json.loads(content)
 
         return record_list
+
 

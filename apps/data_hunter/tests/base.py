@@ -1,3 +1,6 @@
+import os
+import json
+import pickle
 import unittest
 import logging
 
@@ -36,7 +39,6 @@ class BaseTestCase(unittest.TestCase):
         self.taskqueue_stub = self.testbed.get_stub(testbed.TASKQUEUE_SERVICE_NAME)
 
     def tearDown(self):
-        self.patcher_lead_client.stop()
         self.testbed.deactivate()
 
     def get_url(self, name, **kwargs):
@@ -47,3 +49,14 @@ class BaseTestCase(unittest.TestCase):
         :return: URL that matches
         """
         return webapp2.uri_for(name, **kwargs)
+
+
+def open_mock_file(file_name):
+    file_path = os.path.join(
+        os.path.dirname(os.path.realpath(__file__)),
+        'mocks/%s' % file_name)
+
+    file_instance = open(file_path, 'r')
+    content = file_instance.read()
+    file_instance.close()
+    return content

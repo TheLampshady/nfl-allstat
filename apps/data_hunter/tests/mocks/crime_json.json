@@ -1,0 +1,438 @@
+[
+   {
+      "category":[
+         "sexual battery"
+      ],
+      "description":"accused of misdemeanor sexual battery stemming from a december 2014 incident at the home of teammate ray mcdonald.",
+      "date_recorded":"2015-08-26",
+      "pos":"lb",
+      "case_type":"indicted",
+      "team":"sf",
+      "outcome":"resolution undetermined.",
+      "name":"ahmad brooks"
+   },
+   {
+      "category":[
+         "dui"
+      ],
+      "description":"accused of hitting a parked vehicle with his vehicle, being under the influence of alcohol and vandalism in santa clara, calif.",
+      "date_recorded":"2015-08-06",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"sf",
+      "outcome":"resolution undetermined. released by team the next day.",
+      "name":"aldon smith"
+   },
+   {
+      "category":[
+         "drugs"
+      ],
+      "description":"pulled over for seatbelt violation, cited for possession of drug paraphernalia after officer smelled marijuana.",
+      "date_recorded":"2015-07-28",
+      "pos":"wr",
+      "case_type":"cited",
+      "team":"car",
+      "outcome":"resolution undetermined.",
+      "name":"stephen hill"
+   },
+   {
+      "category":[
+         "domestic violence"
+      ],
+      "description":"accused of domestic violence, trespassing and burglary in mississippi.",
+      "date_recorded":"2015-07-20",
+      "pos":"db",
+      "case_type":"arrested",
+      "team":"kc",
+      "outcome":"resolution undetermined. released by team the next day.",
+      "name":"justin cox"
+   },
+   {
+      "category":[
+         "assault"
+      ],
+      "description":"charged with felonious assault stemming from an incident at a virginia beach bar july 3.",
+      "date_recorded":"2015-07-20",
+      "pos":"wr",
+      "case_type":"surrendered",
+      "team":"ten",
+      "outcome":"resolution undetermined.",
+      "name":"justin hunter"
+   },
+   {
+      "category":[
+         "resisting arrest"
+      ],
+      "description":"accused of resisting arrest after street racing, speeding and running through a traffic signal in missouri. gun found under seat.",
+      "date_recorded":"2015-07-14",
+      "pos":"de",
+      "case_type":"arrested",
+      "team":"nyj",
+      "outcome":"resolution undetermined.",
+      "name":"sheldon richardson"
+   },
+   {
+      "category":[
+         "guns"
+      ],
+      "description":"accused of firing a gun in public in miami beach, a misdemeanor offense.",
+      "date_recorded":"2015-07-04",
+      "pos":"te",
+      "case_type":"arrested",
+      "team":"gb",
+      "outcome":"resolution undetermined.",
+      "name":"andrew quarless"
+   },
+   {
+      "category":[
+         "burglary"
+      ],
+      "description":"accused of first-degree burglary in alabama after victims said two armed men kicked in their door and stole cash and ipads.",
+      "date_recorded":"2015-07-01",
+      "pos":"dt",
+      "case_type":"arrested",
+      "team":"hou",
+      "outcome":"resolution undetermined.",
+      "name":"brandon ivory"
+   },
+   {
+      "category":[
+         "hit-and-run"
+      ],
+      "description":"accused of leaving the scene of a crash in which a woman and boy in another car suffered minor injuries.",
+      "date_recorded":"2015-06-07",
+      "pos":"lb",
+      "case_type":"charged",
+      "team":"ne",
+      "outcome":"cut by team the next day. pleaded guilty to multiple charges, one year of probation.",
+      "name":"brandon spikes"
+   },
+   {
+      "category":[
+         "animal cruelty"
+      ],
+      "description":"accused of killing ex-girlfriend's yorkie dog, which showed extensive injuries. charged with felony aggravated animal cruelty.",
+      "date_recorded":"2015-05-29",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"atl",
+      "outcome":"resolution undetermined. released by team same day.",
+      "name":"prince shembo"
+   },
+   {
+      "category":[
+         "domestic violence"
+      ],
+      "description":"accused of assaulting a woman while she was holding a baby in santa clara, calif.",
+      "date_recorded":"2015-05-25",
+      "pos":"dt",
+      "case_type":"arrested",
+      "team":"chi",
+      "outcome":"resolution undetermined. released by team the same day.",
+      "name":"ray mcdonald"
+   },
+   {
+      "category":[
+         "domestic violence"
+      ],
+      "description":"accused of pushing mother of his child and damaging her phone in north carolina on april 5. police say they observed no signs of injury.",
+      "date_recorded":"2015-04-17",
+      "pos":"og",
+      "case_type":"arrested",
+      "team":"det",
+      "outcome":"resolution undetermined. team released him the next week.",
+      "name":"rodney austin"
+   },
+   {
+      "category":[
+         "resisting officer"
+      ],
+      "description":"pulled over in miami, accused of resisting officer who ticketed him for driving in the middle of the road on his scooter.",
+      "date_recorded":"2015-03-29",
+      "pos":"cb",
+      "case_type":"arrested",
+      "team":"no",
+      "outcome":"resolution undetermined.",
+      "name":"brian dixon"
+   },
+   {
+      "category":[
+         "dui"
+      ],
+      "description":"failed sobriety tests after his 2014 ford mustang was pulled over for speeding in baltimore county.",
+      "date_recorded":"2015-03-18",
+      "pos":"rb",
+      "case_type":"arrested",
+      "team":"bal",
+      "outcome":"resolution undetermined. team released him same day.",
+      "name":"bernard pierce"
+   },
+   {
+      "category":[
+         "public intoxication"
+      ],
+      "description":"accused of being drunk in public in oceanside, calif.",
+      "date_recorded":"2015-03-15",
+      "pos":"cb",
+      "case_type":"arrested",
+      "team":"pit",
+      "outcome":"resolution undetermined.",
+      "name":"antwon blake"
+   },
+   {
+      "category":[
+         "evading arrest"
+      ],
+      "description":"accused of running from the scene after police received a report of a disturbance and then tried to detain him in austin, texas.",
+      "date_recorded":"2015-03-09",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"ari",
+      "outcome":"resolution undetermined.",
+      "name":"alex okafor"
+   },
+   {
+      "category":[
+         "domestic violence"
+      ],
+      "description":"suspected of misdemeanor battery in domestic incident in santa clara, calif.",
+      "date_recorded":"2015-03-05",
+      "pos":"fb",
+      "case_type":"arrested",
+      "team":"sf",
+      "outcome":"pleaded no contest to misdemeanor domestic violence charge, 16 weeks of counseling.",
+      "name":"bruce miller"
+   },
+   {
+      "category":[
+         "public intoxication"
+      ],
+      "description":"accused of disorderly conduct while under the influence after police received a report of a fight in vacaville, calif.",
+      "date_recorded":"2015-03-01",
+      "pos":"cb",
+      "case_type":"arrested",
+      "team":"gb",
+      "outcome":"case dropped.",
+      "name":"jarrett bush"
+   },
+   {
+      "category":[
+         "dui"
+      ],
+      "description":"pulled over in charlotte, accused of driving while impaired and driving 100 mph in a 55-mph zone.",
+      "date_recorded":"2015-03-01",
+      "pos":"cb",
+      "case_type":"arrested",
+      "team":"bal",
+      "outcome":"resolution undetermined. team cut him the next day.",
+      "name":"victor hampton"
+   },
+   {
+      "category":[
+         "indecent exposure"
+      ],
+      "description":"pulled over in fort myers, fla., after a girl said she saw a man exposing himself. he later was exonerated after \"false arrest.\"",
+      "date_recorded":"2015-02-16",
+      "pos":"s",
+      "case_type":"arrested",
+      "team":"phi",
+      "outcome":"case dropped. allen cleared of all wrongdoing.",
+      "name":"nate allen"
+   },
+   {
+      "category":[
+         "drugs"
+      ],
+      "description":"pulled over in preble county, ohio, for traffic violation, accused of marijuana possession.",
+      "date_recorded":"2015-02-05",
+      "pos":"rb",
+      "case_type":"cited",
+      "team":"ind",
+      "outcome":"resolution undetermined.",
+      "name":"ahmad bradshaw"
+   },
+   {
+      "category":[
+         "drugs"
+      ],
+      "description":"accused of marijuana possession in wichita, kan., after report of domestic disturbance at hotel. no signs of injury, police said.",
+      "date_recorded":"2015-02-04",
+      "pos":"rb",
+      "case_type":"arrested",
+      "team":"dal",
+      "outcome":"dropped by police.",
+      "name":"joseph randle"
+   },
+   {
+      "category":[
+         "assault"
+      ],
+      "description":"accused of hitting a pizza delivery driver in the head in a dispute over a parking space in washington, d.c.",
+      "date_recorded":"2015-02-03",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"ind",
+      "outcome":"resolution undetermined.",
+      "name":"d'qwell jackson"
+   },
+   {
+      "category":[
+         "drugs",
+         "guns"
+      ],
+      "description":"pulled over in florida, accused of felony drug possession with 357 grams of marijuana. he also had a gun and $190,000 in cash.",
+      "date_recorded":"2015-02-03",
+      "pos":"dt",
+      "case_type":"arrested",
+      "team":"gb",
+      "outcome":"deferred prosecution, probation.",
+      "name":"letroy guion"
+   },
+   {
+      "category":[
+         "animal cruelty",
+         "drugs"
+      ],
+      "description":"charged with two felony counts of aggravated animal cruelty after one of his dogs died, illegal possession of alligator and marijuana.",
+      "date_recorded":"2015-02-02",
+      "pos":"dt",
+      "case_type":"indicted",
+      "team":"bal",
+      "outcome":"released by team the same day. resolution undetermined.",
+      "name":"terrence cody"
+   },
+   {
+      "category":[
+         "dui"
+      ],
+      "description":"pulled over in bowling green, ky., accused of drunk driving, blood-alcohol content of .088.",
+      "date_recorded":"2015-01-23",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"ind",
+      "outcome":"pleaded guilty, 14 days of home confinement, fines and $1,000 in court costs, alcohol treatment program.",
+      "name":"andrew jackson"
+   },
+   {
+      "category":[
+         "drugs"
+      ],
+      "description":"accused of marijuana possession in green bay after police were called to check vehicle playing loud music in parking lot.",
+      "date_recorded":"2015-01-19",
+      "pos":"de",
+      "case_type":"cited",
+      "team":"gb",
+      "outcome":"convicted, $880 fine, one-game suspension.",
+      "name":"datone jones"
+   },
+   {
+      "category":[
+         "domestic violence",
+         "rape"
+      ],
+      "description":"accused of rape, battery and criminal confinement of woman who said he attacked her dec. 1 after night of drinking.",
+      "date_recorded":"2015-01-14",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"ind",
+      "outcome":"resolution undetermined.",
+      "name":"josh mcnary"
+   },
+   {
+      "category":[
+         "drugs"
+      ],
+      "description":"pulled over in new jersey, accused of possessing marijuana and drug paraphernalia.",
+      "date_recorded":"2015-01-10",
+      "pos":"og",
+      "case_type":"arrested",
+      "team":"nyj",
+      "outcome":"diversion program, probation. nfl suspended one game.",
+      "name":"oday aboushi"
+   },
+   {
+      "category":[
+         "guns"
+      ],
+      "description":"pulled over in orlando, accused of misdemeanor gun offense after two guns were found in his vehicle.",
+      "date_recorded":"2015-01-09",
+      "pos":"rb",
+      "case_type":"arrested",
+      "team":"nyj",
+      "outcome":"case dropped by prosecutors.",
+      "name":"chris johnson"
+   },
+   {
+      "category":[
+         "dui"
+      ],
+      "description":"pulled over for allegedly driving 99 mph in 65-mph zone in georgia. accused of drunken and reckless driving.",
+      "date_recorded":"2015-01-07",
+      "pos":"cb",
+      "case_type":"arrested",
+      "team":"chi",
+      "outcome":"pleaded guilty to reckless driving, one year of probation, 40 hours community service, $1,050 in fines.",
+      "name":"tim jennings"
+   },
+   {
+      "category":[
+         "domestic violence"
+      ],
+      "description":"accused of simple battery against woman in galette's home. police noted bleeding from her ear and also arrested galette's cousin.",
+      "date_recorded":"2015-01-05",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"no",
+      "outcome":"case dropped by prosecutors.",
+      "name":"junior galette"
+   },
+   {
+      "category":[
+         "dui"
+      ],
+      "description":"pulled over for speeding, accused of misdemeanor drunken driving.",
+      "date_recorded":"2014-12-29",
+      "pos":"cb",
+      "case_type":"arrested",
+      "team":"min",
+      "outcome":"pleaded guilty to careless driving, 30 days home detention, one year probation, $300 fine.",
+      "name":"jabari price"
+   },
+   {
+      "category":[
+         "guns",
+         "privacy invasion"
+      ],
+      "description":"accused of spreading sexual images, criminal mischief and illegally transporting a gun found in his audi.",
+      "date_recorded":"2014-12-29",
+      "pos":"lb",
+      "case_type":"arrested",
+      "team":"nyj",
+      "outcome":"pleaded guilty to invasion of privacy and gun charge, three years of probation, counseling.",
+      "name":"jermaine cunningham"
+   },
+   {
+      "category":[
+         "trespassing"
+      ],
+      "description":"accused of disorderly intoxication and trespassing after trying to buy items at a store in miami with bubble gum instead of money.",
+      "date_recorded":"2014-11-16",
+      "pos":"cb",
+      "case_type":"arrested",
+      "team":"jac",
+      "outcome":"resolution undetermined.",
+      "name":"dwayne gratz"
+   },
+   {
+      "category":[
+         "handicap parking"
+      ],
+      "description":"accused of leaving the scene, reckless driving and driving with a suspended license after being caught parking in handicap spot.",
+      "date_recorded":"2014-10-24",
+      "pos":"rb",
+      "case_type":"arrested",
+      "team":"ten",
+      "outcome":"pleaded guilty to parking charge and failing to exercise due care, charged $655.",
+      "name":"shonn greene"
+   }
+]
