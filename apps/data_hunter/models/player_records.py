@@ -4,7 +4,7 @@ from google.appengine.ext import ndb
 from apps.common.utils import best_match
 from apps.data_hunter.models.crime_records import ArrestRecord
 
-THRESHOLD = 90
+THRESHOLD = 95
 
 
 class Player(ndb.Model):
