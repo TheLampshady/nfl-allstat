@@ -61,9 +61,12 @@ class CrimeHunterUSA(HunterAbstract):
         progress_range = round(float(len(record_list)) / break_down)
 
         for record in record_list:
+            result = ArrestRecord.get_by_date(record['date_recorded'])
+            if Player.get_by_id(result.player_id):
+                continue
             progress += 1
             if progress_range and (float(progress) % progress_range == 0):
-                logging.info("%s%% Complete" % round(float(progress) / progress_range) * break_down)
+                logging.info("%s%% Complete" % (round(float(progress) / progress_range) * break_down))
 
             player = Player.get_fuzzy_record(record['name'])
 
@@ -73,3 +76,5 @@ class CrimeHunterUSA(HunterAbstract):
 
             player_key = player.key.id()
             ArrestRecord.update_insert_record(player_key, record)
+
+        return len(ArrestRecord.query().fetch())

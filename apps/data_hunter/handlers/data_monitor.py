@@ -19,10 +19,13 @@ class DataMonitorHandler(BaseHandler):
             self.abort(404)
         results = hunter_source.get_content()
 
-        hunter_source.save_content(results)
+        save_count = hunter_source.save_content(results)
 
         #self.queue_add(self.request.path, hunter_source.type)
-        self.render_json(list(results))
+        #self.render_json(list(results))
+        self.response.write("Records Found: %s<br />"
+                            "Records Saved: %s" %
+                            (len(results), save_count))
 
 
     @classmethod

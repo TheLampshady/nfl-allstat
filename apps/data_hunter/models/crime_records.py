@@ -19,6 +19,7 @@ class ArrestRecord(ndb.Model):
     @classmethod
     def update_insert_record(cls, key, attribute):
         date_recorded = datetime.strptime(attribute['date_recorded'], "%Y-%m-%d").date()
+
         crime_record = cls(
             player_id=key,
             date_recorded=date_recorded,
@@ -28,6 +29,13 @@ class ArrestRecord(ndb.Model):
             outcome=attribute['outcome'],
         )
         crime_record.put()
+
+    @classmethod
+    def get_by_date(cls, date_recorded):
+        date_recorded = datetime.strptime(date_recorded, "%Y-%m-%d").date()
+        return ArrestRecord.query(ndb.AND(
+            cls.date_recorded == date_recorded
+        ))
 
     @classmethod
     def get_by_player_id(cls, key):

@@ -78,6 +78,7 @@ class PlayerHunterCBS(HunterAbstract):
         #     future_list.append(Player.update_insert_record(player_prop))
         # ndb.Future.wait_all(future_list)
         Player.overwrite_all(player_list)
+        return len(Player.query().fetch())
 
 
 class PlayerHunterPro(HunterAbstract):

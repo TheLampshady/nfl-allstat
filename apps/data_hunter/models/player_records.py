@@ -52,7 +52,7 @@ class Player(ndb.Model):
         for player in player_props_list:
             progress += 1
             if progress_range and (float(progress) % progress_range == 0):
-                logging.info("%s%% Complete" % round(float(progress) / progress_range) * break_down)
+                logging.info("%s%% Complete" % (round(float(progress) / progress_range) * break_down))
             try:
                 future_list.append(Player(**player).put_async())
             except:
