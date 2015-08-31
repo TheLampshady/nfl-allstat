@@ -56,11 +56,20 @@ class CrimeHunterUSA(HunterAbstract):
         return record_list
 
     def save_content(self, record_list):
+        break_down = 10
+        progress = 1
+        progress_range = round(float(len(record_list)) / break_down)
+
         for record in record_list:
+            progress += 1
+            if progress_range and (float(progress) % progress_range == 0):
+                logging.info("%s%% Complete" % round(float(progress) / progress_range) * break_down)
+
             player = Player.get_fuzzy_record(record['name'])
 
             if not player:
                 logging.warning("Player Not Found: %s" % record)
                 continue
 
-            ArrestRecord.update_insert_record(player[0], record)
+            player_key = player.key.id()
+            ArrestRecord.update_insert_record(player_key, record)
