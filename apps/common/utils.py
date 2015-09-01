@@ -2,9 +2,16 @@ import logging
 from difflib import SequenceMatcher
 
 
-def best_match(term, choice_list, default=None, threshold=0):
+def best_match(term, choice_list, default=None, set_threshold=False):
     max_ratio = 0
     value = default
+    if len(term) < 6:
+        threshold_delta = 0
+    elif len(term) > 16:
+        threshold_delta = 5
+    else:
+        threshold_delta = (len(term)-5) / 2
+    threshold = 90 + threshold_delta
 
     for choice in choice_list:
         check = choice[1] if isinstance(choice, tuple) else choice

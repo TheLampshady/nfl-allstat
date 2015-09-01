@@ -1,8 +1,3 @@
-import os
-import json
-from mock import patch
-import unittest
-
 from apps.data_hunter.tests.base import BaseTestCase
 from apps.data_hunter.models.player_records import Player
 from apps.data_hunter.models.player_records import ArrestRecord
@@ -49,7 +44,6 @@ class TestPlayerModel(BaseTestCase):
 
         self.assertEqual(len(players), 101, "Expect %s players. Got %s." % (1, len(players)))
         self.assertEqual(new_player.team, player_one_double['team'])
-
 
     def test_fuzzy_lookup(self):
         key_value = list()

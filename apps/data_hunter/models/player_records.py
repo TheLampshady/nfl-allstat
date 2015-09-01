@@ -4,8 +4,6 @@ from google.appengine.ext import ndb
 from apps.common.utils import best_match
 from apps.data_hunter.models.crime_records import ArrestRecord
 
-THRESHOLD = 95
-
 
 class Player(ndb.Model):
     """
@@ -77,7 +75,6 @@ class Player(ndb.Model):
 
         return player_record.put_async()
 
-
     @classmethod
     def get_fuzzy_record(cls, search_name):
         key_value_list = list()
@@ -86,7 +83,7 @@ class Player(ndb.Model):
         for player in players:
             key_value_list.append((player.key.id(), player.name))
 
-        result = best_match(search_name, key_value_list, threshold=THRESHOLD)
+        result = best_match(search_name, key_value_list, set_threshold=True)
         if not result:
             return None
 

@@ -1,0 +1,6 @@
+
+Script:
+dev_appserver.py
+
+Parameters:
+dispatch.yaml app.yaml admin.yaml hunter.yaml --port 7070 --admin_port 7000 --datastore_path=nfl.datastore
