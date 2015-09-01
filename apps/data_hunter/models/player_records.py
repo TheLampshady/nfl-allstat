@@ -37,7 +37,6 @@ class Player(ndb.Model):
 
         return player_record
 
-
     @classmethod
     def overwrite_all(cls, player_props_list):
         future_list = list()
