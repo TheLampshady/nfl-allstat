@@ -13,8 +13,3 @@ dispatch:
 # Remote
 - url: "*/remote_api*"
   module: admin
-
-# Criminal Records
-- url: "*/hunter*"
-  module: hunter
-

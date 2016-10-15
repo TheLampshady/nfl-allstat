@@ -1,5 +1,8 @@
-import os
-from google.appengine.ext import vendor
+import os, sys
 
-vendor.add(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lib'))
+sys.path.insert(0, 'libs')
+
+os.environ.setdefault("CURRENT_VERSION_ID", "dev.0")
+os.environ.setdefault('CURRENT_MODULE_ID', "quicksilver")
+os.environ.setdefault("APPLICATION_ID", "localhost")
 

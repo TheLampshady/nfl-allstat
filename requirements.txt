@@ -1,7 +1,5 @@
 #Apps
 PyYaml
-lxml
-Jinja2
 google-api-python-client==1.4.0
 simplejson==3.7.3
 

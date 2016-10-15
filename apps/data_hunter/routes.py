@@ -1,6 +1,6 @@
 import webapp2
 
-from ..application import handle_response_error
+from apps.routes import handle_response_error
 from handlers.data_monitor import DataMonitorHandler
 
 data_source = [

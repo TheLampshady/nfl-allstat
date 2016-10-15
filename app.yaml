@@ -5,8 +5,26 @@ api_version: 1
 threadsafe: true
 
 handlers:
+# Turning on the remote apis: This maps the remote_api request handler to the URL /remote_api
+# for this application. Access to this URL is restricted to administrators for the application.
+- url: /remote_api
+  script: google.appengine.ext.remote_api.handler.application
+  login: admin
+  secure: always
+
+# Enable interactive console
+- url: /console/.*
+  script: google.appengine.ext.admin.application
+  login: admin
+  secure: always
+
+# Criminal Records
+- url: .*/hunter/.*
+  script: apps.data_hunter.routes.app
+  secure: always
+
 - url: .*
-  script: apps.application.app
+  script: apps.routes.app
   secure: always
 
 libraries:

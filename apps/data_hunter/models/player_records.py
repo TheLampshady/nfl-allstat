@@ -1,7 +1,8 @@
 import logging
 
 from google.appengine.ext import ndb
-from apps.common.utils import best_match
+
+from apps.data_hunter.common.utils import best_match
 from apps.data_hunter.models.crime_records import ArrestRecord
 
 

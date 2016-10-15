@@ -1,9 +1,9 @@
-from apps.data_hunter.tests.base import BaseTestCase
-from apps.data_hunter.models.player_records import Player
+from apps.data_hunter.common.utils import best_match_test
 from apps.data_hunter.models.player_records import ArrestRecord
-from apps.data_hunter.tests.mocks.mock_players import *
-from apps.common.utils import best_match_test, best_match
+from apps.data_hunter.models.player_records import Player
+from apps.data_hunter.tests.base import BaseTestCase
 from apps.data_hunter.tests.mocks.mock_crimes import one_crime_mock
+from apps.data_hunter.tests.mocks.mock_players import *
 
 
 class TestPlayerModel(BaseTestCase):

@@ -1,12 +1,13 @@
-import urllib2
 import logging
-from lxml import html
+import urllib2
 
-from apps.common.utils import best_match
+from apps.data_hunter.common.utils import best_match
 from apps.data_hunter.configs.crime_catagories import crime_category_list
+from apps.data_hunter.models.crime_records import ArrestRecord
 from apps.data_hunter.models.hunters.base_hunter import HunterAbstract
 from apps.data_hunter.models.player_records import Player
-from apps.data_hunter.models.crime_records import ArrestRecord
+from lxml import html
+
 
 class CrimeHunterUSA(HunterAbstract):
 
