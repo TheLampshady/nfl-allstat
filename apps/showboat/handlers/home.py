@@ -1,4 +1,4 @@
-from apps.handlers.base import BaseHandler
+from apps.base_handler import BaseHandler
 
 
 class HomePage(BaseHandler):

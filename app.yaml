@@ -20,11 +20,22 @@ handlers:
 
 # Criminal Records
 - url: .*/hunter/.*
-  script: apps.data_hunter.routes.app
+  script: apps.data_hunter.routes._APP
+  secure: always
+
+## Static
+- url: .*/static
+  static_dir: static
+  secure: always
+
+- url: /favicon\.ico
+  static_files: static/favicon.ico
+  upload: favicon\.ico
+  expiration: 7d
   secure: always
 
 - url: .*
-  script: apps.routes.app
+  script: apps.showboat.routes._APP
   secure: always
 
 libraries:
@@ -32,7 +43,8 @@ libraries:
   version: latest
 - name: jinja2
   version: latest
-
+- name: lxml
+  version: latest
 
 skip_files:
 #File Types
@@ -49,14 +61,13 @@ skip_files:
 - ^(.*/)?\.datastore
 
 #Root Directory
-- ^tests/.*
 - ^deployer/.*
 - ^\.git/.*
 - README.md
 - Makefile
 
 #Children Directory
-- .*/tests/.*
+- .*tests/.*
 - .*egg-info/.*
 - .*dist-info/.*
 - ^static/js/common/closure-library.*

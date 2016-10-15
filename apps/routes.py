@@ -1,22 +1,19 @@
 import logging
 import webapp2
-import jinja2
+from webapp2_extras import jinja2
 import settings
 
+TEMPLATE_PATH = "apps/templates"
 
 route_config = {
-    'template_path': "apps.templates",
+    'template_path': TEMPLATE_PATH,
     'environment_args': {
         'autoescape': True,
-        'extensions': [
-            'jinja2.ext.autoescape',
-            'jinja2.ext.with_',
-            'jinja2.ext.i18n',
-        ],
     },
 }
 
 _APP = webapp2.WSGIApplication([], debug=True)
+
 
 def handle_response_error(request, response, exception):
 
@@ -25,7 +22,7 @@ def handle_response_error(request, response, exception):
     if settings.DEBUG or status_code >= 500:
         logging.exception(exception)
 
-    j = jinja2.get_jinja2()
+    j = jinja2.Jinja2(app=_APP, config={'template_path': TEMPLATE_PATH})
     t = j.render_template(str(status_code) + '.html')
 
     response.write(t)

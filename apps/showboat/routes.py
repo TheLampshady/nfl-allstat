@@ -3,14 +3,9 @@ from apps.routes import handle_response_error
 from handlers.home import HomePage
 
 route_config = {
-    'template_path': "apps.templates",
+    'template_path': "apps/showboat/templates",
     'environment_args': {
         'autoescape': True,
-        'extensions': [
-            'jinja2.ext.autoescape',
-            'jinja2.ext.with_',
-            'jinja2.ext.i18n',
-        ],
     },
 }
 
@@ -18,7 +13,7 @@ route_config = {
 _APP = webapp2.WSGIApplication(
     [
         webapp2.Route('/', handler=HomePage, name='home'),
-    ], debug=True)
+    ], debug=True, config=route_config)
 
 
 

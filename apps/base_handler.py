@@ -1,4 +1,5 @@
 import webapp2
+import json
 from webapp2_extras import jinja2
 
 
@@ -16,3 +17,7 @@ class BaseHandler(webapp2.RedirectHandler):
 
     def render(self, template):
         self.response.write(self.jinja2.render_template(template, **self.context))
+
+    def render_json(self, content):
+        self.response.headers.add('Content-Type', 'application/json')
+        self.response.write(json.dumps(content))

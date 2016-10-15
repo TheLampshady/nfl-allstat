@@ -2,10 +2,11 @@ from datetime import datetime
 
 from google.appengine.api import taskqueue
 
-from base_handler import BaseHandler
+from apps.base_handler import BaseHandler
 from ..configs.queue_configs import MONITOR_QUEUE
 from apps.data_hunter.models.hunters.crime_hunters import CrimeHunterUSA
 from apps.data_hunter.models.hunters.player_hunters import PlayerHunterCBS
+
 
 class DataMonitorHandler(BaseHandler):
 
